@@ -2,16 +2,7 @@ name: PR commenter
 
 on:
   pull_request:
-    types:
-      [
-        assigned,
-        unassigned,
-        opened,
-        reopened,
-        synchronize,
-        review_requested,
-        review_request_removed,
-      ]
+    types: [opened, reopened, synchronize, edited]
 
 jobs:
   post-comment:
@@ -24,4 +15,5 @@ jobs:
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.number }}
-          body: THIS IS A TEST BRO
+          body: |
+            <img alt="Run E2E button" src="https://clipart-library.com/images_k/button-transparent-png/button-transparent-png-23.png" width="64px" height="64px" />
