@@ -1,0 +1,25 @@
+name: PR commenter
+
+on:
+  pull_request:
+    types:
+      [
+        assigned,
+        unassigned,
+        opened,
+        reopened,
+        synchronize,
+        review_requested,
+        review_request_removed,
+      ]
+
+jobs:
+  post-comment:
+    name: Post comment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.number }}
+          body: THIS IS A TEST BRO
