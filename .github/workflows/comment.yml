@@ -17,6 +17,8 @@ jobs:
   post-comment:
     name: Post comment
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Post comment
         uses: peter-evans/create-or-update-comment@v4
