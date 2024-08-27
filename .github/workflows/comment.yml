@@ -16,4 +16,4 @@ jobs:
         with:
           issue-number: ${{ github.event.number }}
           body: |
-            <img alt="Run E2E button" src="https://clipart-library.com/images_k/button-transparent-png/button-transparent-png-23.png" width="64px" height="64px" />
+            [<img alt="Run E2E button" src="https://clipart-library.com/images_k/button-transparent-png/button-transparent-png-23.png" width="64px" height="64px" />](https://google.com)
